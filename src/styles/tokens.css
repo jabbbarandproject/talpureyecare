@@ -1,0 +1,138 @@
+/* ==========================================================================
+   TALPUR EYE CARE — DESIGN TOKENS
+   Design system: "Aurora Optic" (Gold + Blue + White rebrand) — a premium,
+   optical/medical palette built around deep navy blue, a rich gold/amber
+   accent, and white/off-white surfaces.
+   Palette rationale:
+     - Deep navy blue (#0D2137, #0A1A2B) = primary brand color, premium &
+       trustworthy; used for the header, hero banners, and primary buttons.
+     - Rich gold / amber (#C9972C family) = primary accent; used for CTA
+       buttons, active filter chips, badges, links, and highlights — the
+       "premium optician" cue.
+     - White / off-white = background, keeps the shop feeling light, clean,
+       and clinical-premium rather than cluttered.
+     - The old teal/purple accent families have been removed from active use;
+       their token names are kept as thin aliases onto the new gold/blue
+       values so any legacy reference still resolves to the new palette.
+   Typography pairing (unchanged):
+     - Fraunces (serif, variable optical size) for display/headings -> premium, editorial, human
+     - Plus Jakarta Sans (geometric sans) for body/UI -> clean, modern, legible
+   ========================================================================== */
+
+:root {
+  /* ---- Color: Navy (primary brand) ---- */
+  --color-navy-900: #0a1a2b;
+  --color-navy-800: #0d2137;
+  --color-navy-700: #163452;
+  --color-navy-600: #1f4a6e;
+  --color-navy-500: #2c5d87;
+
+  /* ---- Color: Gold (primary accent) ---- */
+  --color-gold-700: #8a6418;
+  --color-gold-600: #b3811f;
+  --color-gold-500: #c9972c;
+  --color-gold-400: #d9ad4d;
+  --color-gold-300: #e8c57e;
+  --color-gold-200: #f3dfae;
+  --color-gold-100: #faeed3;
+
+  /* ---- Legacy aliases — old "teal"/"purple" token names now resolve to the
+     gold/navy palette so nothing in older CSS silently breaks. New code
+     should prefer --color-navy-* / --color-gold-* directly. ---- */
+  --color-teal-500: var(--color-navy-600);
+  --color-teal-300: var(--color-navy-500);
+  --color-teal-100: var(--color-gold-100);
+  --color-purple-600: var(--color-navy-700);
+  --color-purple-500: var(--color-navy-600);
+  --color-purple-400: var(--color-gold-400);
+  --color-purple-200: var(--color-gold-200);
+  --color-purple-100: var(--color-gold-100);
+
+  --color-amber-600: var(--color-gold-600);
+  --color-amber-500: var(--color-gold-500);
+  --color-amber-400: var(--color-gold-400);
+  --color-amber-200: var(--color-gold-200);
+  --color-amber-100: var(--color-gold-100);
+
+  --color-rose-500: #b4452f;
+  --color-rose-100: #f7e2dc;
+
+  /* ---- Color: White / off-white (background) ---- */
+  --color-cream-50: #ffffff;
+  --color-cream-100: #f8f9fb;
+  --color-cream-200: #eef1f5;
+
+  --color-ink-900: #10161f;
+  --color-ink-700: #37414c;
+  --color-ink-500: #5f6b75;
+  --color-ink-300: #a3aeb6;
+  --color-ink-100: #e2e6ea;
+
+  --color-white: #ffffff;
+  --color-success: #2f7d4f;
+  --color-error: #b23b2a;
+
+  /* ---- Semantic ---- */
+  --bg-page: var(--color-cream-100);
+  --bg-surface: var(--color-white);
+  --bg-surface-alt: var(--color-cream-50);
+  --bg-dark: var(--color-navy-900);
+  --text-primary: var(--color-ink-900);
+  --text-secondary: var(--color-ink-500);
+  --text-inverse: var(--color-white);
+  --accent-primary: var(--color-gold-500);
+  --accent-primary-hover: var(--color-gold-600);
+  --accent-secondary: var(--color-navy-600);
+  --accent-secondary-hover: var(--color-navy-700);
+  --brand-primary: var(--color-navy-800);
+  --border-subtle: var(--color-ink-100);
+  --gradient-brand: linear-gradient(135deg, var(--color-navy-800) 0%, var(--color-gold-500) 100%);
+
+  /* ---- Typography ---- */
+  --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --font-body: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.375rem;
+  --fs-xl: 1.75rem;
+  --fs-2xl: 2.25rem;
+  --fs-3xl: 3rem;
+  --fs-4xl: 3.75rem;
+
+  /* ---- Spacing scale ---- */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 2.5rem;
+  --sp-8: 3rem;
+  --sp-9: 4rem;
+  --sp-10: 5rem;
+  --sp-12: 7rem;
+
+  /* ---- Radii & Shadows ---- */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 1px 3px rgba(10, 26, 43, 0.08);
+  --shadow-md: 0 8px 24px rgba(10, 26, 43, 0.1);
+  --shadow-lg: 0 20px 48px rgba(10, 26, 43, 0.16);
+  --shadow-glow: 0 0 0 4px rgba(201, 151, 44, 0.25);
+
+  /* ---- Layout ---- */
+  --container-max: 1240px;
+  --header-height: 76px;
+
+  /* ---- Motion ---- */
+  --ease-standard: cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-fast: 160ms var(--ease-standard);
+  --transition-base: 240ms var(--ease-standard);
+  --transition-slow: 420ms var(--ease-standard);
+}

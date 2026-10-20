@@ -1,0 +1,18 @@
+{
+  "name": "talpur-eyecare-server",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Lightweight Express + lowdb (JSON file) backend for Talpur Eye Care.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "lowdb": "^7.0.1",
+    "morgan": "^1.10.0"
+  }
+}

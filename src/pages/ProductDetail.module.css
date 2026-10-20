@@ -1,0 +1,247 @@
+.breadcrumb {
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  margin-bottom: var(--sp-6);
+}
+
+.breadcrumb a:hover {
+  color: var(--color-navy-900);
+  text-decoration: underline;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-8);
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.mainImage {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 1/1;
+  box-shadow: var(--shadow-md);
+  background: var(--color-cream-200);
+}
+
+.mainImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumbRow {
+  display: flex;
+  gap: var(--sp-3);
+}
+
+.thumb {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: border-color var(--transition-fast);
+  background: var(--color-cream-200);
+}
+
+.thumb.active {
+  border-color: var(--color-teal-500);
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.category {
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-purple-600);
+  font-weight: 700;
+  margin-bottom: var(--sp-2);
+}
+
+.name {
+  font-size: var(--fs-2xl);
+  margin-bottom: var(--sp-3);
+}
+
+.ratingRow {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-5);
+}
+
+.ratingRow span {
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+}
+
+.price {
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  color: var(--color-navy-800);
+  margin-bottom: var(--sp-5);
+}
+
+.description {
+  color: var(--text-secondary);
+  margin-bottom: var(--sp-6);
+  line-height: 1.7;
+}
+
+.specGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-3);
+  background: var(--color-teal-100);
+  border-radius: var(--radius-md);
+  padding: var(--sp-5);
+  margin-bottom: var(--sp-6);
+}
+
+.specItem span:first-child {
+  display: block;
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+  margin-bottom: 2px;
+}
+
+.specItem span:last-child {
+  font-weight: 700;
+  font-size: var(--fs-sm);
+  color: var(--color-navy-900);
+}
+
+.purchaseRow {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  margin-bottom: var(--sp-5);
+  flex-wrap: wrap;
+}
+
+.qtyControl {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid var(--border-subtle);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+
+.qtyControl button {
+  width: 36px;
+  height: 36px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-navy-800);
+}
+
+.qtyControl button:hover {
+  background: var(--color-teal-100);
+}
+
+.qtyControl span {
+  min-width: 32px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.actionBtns {
+  display: flex;
+  gap: var(--sp-3);
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.actionBtns .btn {
+  flex: 1;
+  min-width: 160px;
+}
+
+.relatedSection {
+  margin-top: var(--sp-10);
+}
+
+.relatedGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-5);
+}
+
+.reviewsSection {
+  margin-top: var(--sp-10);
+}
+
+.reviewSummary {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-5);
+  margin-bottom: var(--sp-6);
+}
+
+.reviewScore {
+  font-size: var(--fs-3xl);
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--color-navy-900);
+}
+
+.reviewList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+.reviewCard {
+  padding: var(--sp-5);
+}
+
+.reviewHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--sp-2);
+}
+
+.reviewAuthor {
+  font-weight: 700;
+  font-size: var(--fs-sm);
+}
+
+.reviewDate {
+  font-size: var(--fs-xs);
+  color: var(--text-secondary);
+}
+
+.reviewText {
+  color: var(--text-secondary);
+  font-size: var(--fs-sm);
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .relatedGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

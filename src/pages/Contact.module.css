@@ -1,0 +1,79 @@
+.layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: var(--sp-7);
+}
+
+.infoCard {
+  padding: var(--sp-6);
+  margin-bottom: var(--sp-5);
+}
+
+.infoRow {
+  display: flex;
+  gap: var(--sp-4);
+  margin-bottom: var(--sp-5);
+}
+
+.infoRow:last-child {
+  margin-bottom: 0;
+}
+
+.infoIcon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  color: var(--color-gold-600);
+}
+
+.infoRow h4 {
+  font-size: var(--fs-sm);
+  margin-bottom: 2px;
+}
+
+.infoRow p,
+.infoRow a {
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.infoRow a:hover {
+  color: var(--color-navy-900);
+}
+
+.mapPlaceholder {
+  height: 220px;
+  border-radius: var(--radius-md);
+  background: repeating-linear-gradient(
+    45deg,
+    var(--color-teal-100),
+    var(--color-teal-100) 10px,
+    var(--color-cream-200) 10px,
+    var(--color-cream-200) 20px
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: var(--sp-2);
+  color: var(--color-navy-800);
+  font-weight: 700;
+  font-size: var(--fs-sm);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.mapIcon {
+  font-size: 2rem;
+}
+
+.formCard {
+  padding: var(--sp-7);
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}

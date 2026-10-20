@@ -1,0 +1,88 @@
+.pageHero {
+  background: var(--color-navy-900);
+  color: var(--text-inverse);
+  padding: var(--sp-9) 0 var(--sp-7);
+  text-align: center;
+}
+
+.pageHero h1 {
+  color: var(--text-inverse);
+  font-size: var(--fs-3xl);
+  margin-bottom: var(--sp-3);
+}
+
+.pageHero p {
+  color: var(--color-teal-100);
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-5);
+}
+
+.card {
+  padding: var(--sp-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.iconWrap {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  background: var(--color-teal-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  color: var(--color-gold-600);
+}
+
+.card h3 {
+  font-size: var(--fs-lg);
+}
+
+.card p {
+  color: var(--text-secondary);
+  font-size: var(--fs-sm);
+  line-height: 1.6;
+  flex: 1;
+}
+
+.meta {
+  display: flex;
+  gap: var(--sp-4);
+  font-size: var(--fs-xs);
+  color: var(--text-secondary);
+  font-weight: 700;
+}
+
+.meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  margin-top: var(--sp-2);
+  flex-wrap: wrap;
+}
+
+@media (max-width: 760px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

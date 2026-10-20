@@ -1,0 +1,42 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--color-navy-900);
+}
+
+.mark {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+}
+
+.wordmark {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+  color: var(--color-navy-900);
+}
+
+.wordmark em {
+  font-style: italic;
+  font-weight: 500;
+  color: var(--color-purple-600);
+}
+
+.light .wordmark,
+.light.logo {
+  color: var(--text-inverse);
+}
+
+.light .wordmark {
+  color: var(--text-inverse);
+}
+
+.light .wordmark em {
+  color: var(--color-teal-300);
+}

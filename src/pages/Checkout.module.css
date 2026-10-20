@@ -1,0 +1,158 @@
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: var(--sp-7);
+  align-items: flex-start;
+}
+
+.formSection {
+  padding: var(--sp-6);
+  margin-bottom: var(--sp-5);
+}
+
+.formSection h3 {
+  font-size: var(--fs-md);
+  margin-bottom: var(--sp-5);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.stepBadge {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--color-navy-800);
+  color: var(--text-inverse);
+  font-size: var(--fs-xs);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.paymentOptions {
+  display: flex;
+  gap: var(--sp-4);
+  margin-bottom: var(--sp-5);
+}
+
+.paymentOption {
+  flex: 1;
+  border: 1.5px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--sp-4);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  cursor: pointer;
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.paymentOption.active {
+  border-color: var(--color-amber-500);
+  background: var(--color-amber-100);
+}
+
+.paymentOption input {
+  accent-color: var(--color-amber-500);
+  width: 18px;
+  height: 18px;
+}
+
+.paymentOption span {
+  font-weight: 700;
+  font-size: var(--fs-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.cardFieldsRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-4);
+}
+
+.codNote {
+  background: var(--color-teal-100);
+  padding: var(--sp-4);
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-sm);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--color-navy-800);
+}
+
+.summaryCard {
+  padding: var(--sp-6);
+  position: sticky;
+  top: calc(var(--header-height) + var(--sp-4));
+}
+
+.summaryCard h3 {
+  font-size: var(--fs-lg);
+  margin-bottom: var(--sp-5);
+}
+
+.miniItem {
+  display: flex;
+  gap: var(--sp-3);
+  align-items: center;
+  margin-bottom: var(--sp-4);
+}
+
+.miniItemImage {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  background: radial-gradient(circle at 50% 40%, var(--color-teal-100) 0%, var(--color-cream-200) 70%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.miniItemSvg {
+  width: 90%;
+}
+
+.miniItem div {
+  flex: 1;
+  font-size: var(--fs-sm);
+}
+
+.miniItem .qty {
+  color: var(--text-secondary);
+  font-size: var(--fs-xs);
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--fs-sm);
+  margin-bottom: var(--sp-3);
+  color: var(--text-secondary);
+}
+
+.summaryRow.total {
+  color: var(--color-navy-900);
+  font-weight: 700;
+  font-size: var(--fs-md);
+  border-top: 1px solid var(--border-subtle);
+  padding-top: var(--sp-4);
+  margin-top: var(--sp-3);
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .cardFieldsRow {
+    grid-template-columns: 1fr;
+  }
+  .paymentOptions {
+    flex-direction: column;
+  }
+}

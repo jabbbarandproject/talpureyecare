@@ -1,0 +1,331 @@
+/* ---- Hero ---- */
+.hero {
+  position: relative;
+  background: linear-gradient(135deg, var(--color-navy-900) 0%, var(--color-navy-800) 55%, var(--color-navy-600) 100%);
+  color: var(--text-inverse);
+  overflow: hidden;
+  padding: var(--sp-10) 0 var(--sp-9);
+}
+
+.heroInner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--sp-8);
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.heroEyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  background: rgba(232, 166, 76, 0.15);
+  color: var(--color-amber-400);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: var(--sp-5);
+}
+
+.heroTitle {
+  font-size: clamp(2.2rem, 4.2vw, var(--fs-4xl));
+  color: var(--text-inverse);
+  margin-bottom: var(--sp-5);
+}
+
+.heroTitle em {
+  font-style: italic;
+  color: var(--color-amber-400);
+}
+
+.heroSubtitle {
+  font-size: var(--fs-md);
+  color: var(--color-teal-100);
+  max-width: 480px;
+  margin-bottom: var(--sp-7);
+  line-height: 1.7;
+}
+
+.heroActions {
+  display: flex;
+  gap: var(--sp-4);
+  flex-wrap: wrap;
+}
+
+.heroVisual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.heroImageCard {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 4/5;
+}
+
+.heroImageCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.floatBadge {
+  position: absolute;
+  background: var(--bg-surface);
+  color: var(--color-navy-900);
+  border-radius: var(--radius-md);
+  padding: var(--sp-3) var(--sp-4);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  animation: float 4s ease-in-out infinite;
+}
+
+.floatBadge svg:first-child {
+  font-size: 1.4rem;
+  color: var(--color-gold-500);
+  flex-shrink: 0;
+}
+
+.floatBadgeTop {
+  top: -16px;
+  right: -16px;
+}
+
+.floatBadgeBottom {
+  bottom: -16px;
+  left: -20px;
+  animation-delay: 1.4s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* ---- Trust badges ---- */
+.trustBar {
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.trustGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: var(--sp-6) 0;
+  gap: var(--sp-5);
+}
+
+.trustItem {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  justify-content: center;
+  text-align: left;
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  color: var(--color-navy-800);
+}
+
+.trustItem svg:first-child {
+  font-size: 1.6rem;
+  color: var(--color-gold-500);
+  flex-shrink: 0;
+}
+
+/* ---- Featured products ---- */
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-5);
+}
+
+.viewAllWrap {
+  text-align: center;
+  margin-top: var(--sp-7);
+}
+
+/* ---- Services overview ---- */
+.servicesStrip {
+  background: var(--color-teal-100);
+}
+
+.serviceMiniGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--sp-4);
+}
+
+.serviceMini {
+  background: var(--bg-surface);
+  border-radius: var(--radius-md);
+  padding: var(--sp-5);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.serviceMini:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.serviceMiniIcon {
+  font-size: 2rem;
+  margin-bottom: var(--sp-3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-navy-700);
+}
+
+.serviceMini h3 {
+  font-size: var(--fs-sm);
+  margin-bottom: var(--sp-2);
+}
+
+.serviceMini p {
+  font-size: var(--fs-xs);
+  color: var(--text-secondary);
+}
+
+/* ---- CTA banner ---- */
+.ctaBanner {
+  background: linear-gradient(120deg, var(--color-amber-500), var(--color-amber-400));
+  border-radius: var(--radius-lg);
+  padding: var(--sp-8);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-6);
+  flex-wrap: wrap;
+}
+
+.ctaBanner h2 {
+  font-size: var(--fs-xl);
+  color: var(--color-navy-900);
+  max-width: 480px;
+}
+
+.ctaBanner p {
+  color: var(--color-navy-800);
+  margin-top: var(--sp-2);
+}
+
+/* ---- Testimonials ---- */
+.testimonialGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-5);
+}
+
+.testimonialCard {
+  background: var(--bg-surface);
+  border-radius: var(--radius-md);
+  padding: var(--sp-6);
+  box-shadow: var(--shadow-sm);
+}
+
+.testimonialQuote {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  color: var(--color-navy-900);
+  line-height: 1.5;
+  margin: var(--sp-3) 0 var(--sp-4);
+}
+
+.testimonialAuthor {
+  font-weight: 700;
+  font-size: var(--fs-sm);
+}
+
+.testimonialContext {
+  font-size: var(--fs-xs);
+  color: var(--text-secondary);
+}
+
+/* ---- Newsletter ---- */
+.newsletter {
+  background: var(--color-navy-900);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-8);
+  text-align: center;
+  color: var(--text-inverse);
+}
+
+.newsletter h2 {
+  color: var(--text-inverse);
+  font-size: var(--fs-xl);
+  margin-bottom: var(--sp-3);
+}
+
+.newsletter p {
+  color: var(--color-teal-100);
+  margin-bottom: var(--sp-6);
+}
+
+.newsletterForm {
+  display: flex;
+  gap: var(--sp-3);
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.newsletterForm input {
+  flex: 1;
+  padding: 0.8rem 1.1rem;
+  border-radius: var(--radius-pill);
+  border: none;
+  font-size: var(--fs-sm);
+}
+
+.newsletterForm input:focus {
+  outline: 2px solid var(--color-amber-500);
+}
+
+@media (max-width: 960px) {
+  .heroInner {
+    grid-template-columns: 1fr;
+  }
+  .heroVisual {
+    order: -1;
+  }
+  .productGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .serviceMiniGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .trustGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .testimonialGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .productGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-3);
+  }
+  .newsletterForm {
+    flex-direction: column;
+  }
+  .ctaBanner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
